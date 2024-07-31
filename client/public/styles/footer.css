@@ -1,0 +1,26 @@
+.footer-wrapper {
+  padding: 2em;
+  text-align: center;
+}
+
+.footer {
+  margin: 0.5em;
+}
+
+.social-media {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  margin: 1em 0;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4em;
+  transition: color 0.4s ease;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+.link:hover {
+  color: #f35525;
+}
