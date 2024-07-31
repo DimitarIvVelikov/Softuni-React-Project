@@ -1,3 +1,7 @@
+@import "../public/styles/header.css";
+@import "../public/styles/footer.css";
+@import "../public/styles/home.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -25,4 +29,8 @@ ul,
 ol,
 li {
   font: inherit;
+}
+
+body {
+  background-color: rgba(229, 209, 209, 0.74);
 }
