@@ -1,0 +1,29 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em 2em;
+}
+
+.main-nav {
+  display: flex;
+  gap: 2em;
+  align-items: center;
+  list-style: none;
+}
+
+.main-nav-link,
+.username-link,
+.logo {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.4em;
+  transition: color 0.4s ease;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.main-nav-link:hover,
+.username-link:hover,
+.logo:hover {
+  color: #f35525;
+}
