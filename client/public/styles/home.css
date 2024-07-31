@@ -15,3 +15,64 @@
   background-position: center center;
   background-size: cover;
 }
+
+.about-trainer {
+  display: flex;
+  width: 70vw;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+.info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+}
+
+.about-trainer-title {
+  font-size: 2em;
+  color: #f35525;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.1px;
+}
+
+.about-trainer-img {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+}
+
+.popular-workouts {
+  margin: 2em auto;
+  width: 80vw;
+  display: flex;
+  gap: 2em;
+}
+
+.card-wrapper {
+  flex: 1 0 25vw;
+  text-align: center;
+  border-radius: 2em;
+}
+
+.workout-info {
+  display: flex;
+  gap: 1vw;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.workout-info * {
+  flex: 1 0 24vw;
+}
+
+.card-img {
+  border: black solid 1px;
+  border-radius: 2em;
+}
+
+.card-body,
+.card-img {
+  width: 25vw;
+}
