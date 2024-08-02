@@ -1,0 +1,40 @@
+.required {
+  color: #f35525;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 20vw;
+  gap: 1em;
+  border-radius: 2em;
+  padding: 3em;
+  background-color: #e8bfb2;
+}
+
+.login-form div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.email-input input,
+.password-input input {
+  width: 15vw;
+  border-radius: 1em;
+  padding: 0.3em 1em;
+}
+
+.submit-button button {
+  height: 3em;
+  width: 10vw;
+  border-radius: 2em;
+  color: #f35525;
+  transition: color 0.4s ease, background-color 0.4s ease;
+}
+.submit-button button:hover {
+  color: black;
+  background-color: #f35525;
+}
