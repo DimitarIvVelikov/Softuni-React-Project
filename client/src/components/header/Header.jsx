@@ -21,8 +21,13 @@ export default function Header() {
             </Link>
           </li>
           <li className="main-nav-li">
-            <Link to="/" className="main-nav-link">
-              Contact
+            <Link to="/login" className="main-nav-link">
+              Login
+            </Link>
+          </li>
+          <li className="main-nav-li">
+            <Link to="/register" className="main-nav-link">
+              Register
             </Link>
           </li>
         </ul>
