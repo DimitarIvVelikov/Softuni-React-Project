@@ -1,6 +1,9 @@
 @import "../public/styles/header.css";
 @import "../public/styles/footer.css";
 @import "../public/styles/home.css";
+@import "../public/styles/login.css";
+@import "../public/styles/register.css";
+@import "../public/styles/catalog.css";
 
 * {
   margin: 0;
