@@ -38,8 +38,6 @@ export default function Home() {
         <Card />
         <Card />
       </div>
-
-      <div className="contact-us-form-wrapper"></div>
     </>
   );
 }
