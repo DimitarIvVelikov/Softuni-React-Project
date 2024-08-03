@@ -7,18 +7,31 @@
   flex-wrap: wrap;
   text-align: center;
 }
-.catalog-card-img {
-  width: 25vw;
-}
 
 .catalog-card-wrapper {
-  flex: 1 0 25vw;
+  flex: 1 1 25vw;
+  text-wrap: nowrap;
+}
+.catalog-card-img {
+  width: 25vw;
+  height: 20vw;
+  /* margin-bottom: 2vh; */
 }
 
-.catalog-workout-info span:first-child {
-  padding-right: 2em;
+.catalog-workout-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
 }
 
 .catalog-workout-info span {
-  flex: 1 0 7vw;
+  flex: 1 0 1.5vw;
+  font-size: 12px;
 }
+/* .catalog-workout-info span:nth-child(2) {
+  margin-bottom: -4vh;
+}
+
+.catalog-workout-info span:first-child {
+  margin-bottom: -4vh;
+} */
