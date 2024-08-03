@@ -1,6 +1,11 @@
-import Card from "../card/Card";
+import { useEffect } from "react";
 import CatalogCard from "../catalogCard/CatalogCard";
 export default function Catalog() {
+  useEffect(() => {
+    (async () => {
+      const trainingPrograms = "";
+    })();
+  }, []);
   return (
     <>
       <h1 className="home-title">Catalog</h1>
