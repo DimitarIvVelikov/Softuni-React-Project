@@ -38,6 +38,9 @@ The following will present the libraries that are used to create this project.
 
 # FrontEnd
 
+    React
+    Material IU Icons
+
 # Backend
 
 - NodeJS
