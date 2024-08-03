@@ -1,0 +1,24 @@
+.catalog-wrapper {
+  display: flex;
+  width: 85vw;
+  margin: 0 auto;
+  padding: 0 2.5vw;
+  gap: 2.5vw;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.catalog-card-img {
+  width: 25vw;
+}
+
+.catalog-card-wrapper {
+  flex: 1 0 25vw;
+}
+
+.catalog-workout-info span:first-child {
+  padding-right: 2em;
+}
+
+.catalog-workout-info span {
+  flex: 1 0 7vw;
+}
