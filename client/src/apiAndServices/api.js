@@ -1,0 +1,56 @@
+import store from "../Store/store";
+
+const baseURL = "http://localhost:3030/";
+
+async function requester(method, url, body) {
+  const options = {
+    method,
+    headers: {},
+  };
+  const userData = store.getState()?.auth;
+  if (userData || options.method === "DELETE") {
+    options.headers["x-authorization"] = userData.accessToken;
+  }
+
+  if (body) {
+    options.headers["Content-Type"] = "application/json";
+    options.body = JSON.stringify(body);
+  }
+  try {
+    const response = await fetch(baseURL + url, options);
+    if (!response.ok) {
+      const error = await response.json();
+      throw new Error(error.message);
+    }
+    if (response.status === 204) {
+      return response;
+    }
+    return response.json();
+  } catch (error) {
+    console.log(error);
+    alert("Error requester");
+  }
+}
+
+async function get(url) {
+  return await requester("GET", url);
+}
+
+async function post(url, body) {
+  return await requester("POST", url, body);
+}
+
+async function put(url, body) {
+  return await requester("PUT", url, body);
+}
+
+async function del(url) {
+  return await requester("DELETE", url);
+}
+
+export const api = {
+  get,
+  post,
+  put,
+  del,
+};
