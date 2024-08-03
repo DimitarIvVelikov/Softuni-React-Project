@@ -1,16 +1,14 @@
-import store from "../Store/store";
-
-const baseURL = "http://localhost:3030/";
+const baseURL = "http://127.0.0.1:5000/api";
 
 async function requester(method, url, body) {
   const options = {
     method,
     headers: {},
   };
-  const userData = store.getState()?.auth;
-  if (userData || options.method === "DELETE") {
-    options.headers["x-authorization"] = userData.accessToken;
-  }
+  // const userData = store.getState()?.auth;
+  // if (userData || options.method === "DELETE") {
+  //   options.headers["x-authorization"] = userData.accessToken;
+  // }
 
   if (body) {
     options.headers["Content-Type"] = "application/json";
