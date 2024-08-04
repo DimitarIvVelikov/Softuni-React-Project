@@ -17,12 +17,12 @@ router.post("/register", async (req, res, next) => {
     const { token, data } = await authService.register(userData);
     let createdUser = bsonToJson(data);
     createdUser = removePassword(createdUser);
-    res.cookie(authCookieName, token, {
-      httpOnly: true,
-      sameSite: "none",
-      secure: true,
-    });
-    res.status(200).send(createdUser);
+    // res.cookie(authCookieName, token, {
+    //   httpOnly: true,
+    //   sameSite: "none",
+    //   secure: true,
+    // });
+    res.status(200).send({ ...createdUser, accessToken: token });
   } catch (error) {
     res.status(400).send({ error: error.message });
   }
@@ -36,30 +36,29 @@ router.post("/login", async (req, res) => {
     let createdUser = bsonToJson(data);
     createdUser = removePassword(createdUser);
     console.log(token);
-    res.cookie(authCookieName, token, {
-      httpOnly: true,
-      sameSite: "none",
-      secure: true,
-    });
-    res.status(200).send(createdUser);
+    // res.cookie(authCookieName, token, {
+    //   httpOnly: true,
+    //   sameSite: "none",
+    //   secure: true,
+    // });
+    res.status(200).send({ ...createdUser, accessToken: token });
   } catch (error) {
     res.status(400).send({ error: error.message });
   }
 });
 
 router.post("/logout", isAuth, async (req, res) => {
-  const token = req.cookies[authCookieName];
+  const token = req.headers["x-authorization"];
   console.log("Logout Triggered");
   try {
     await authService.logout(token);
-    res
-      .clearCookie(authCookieName, {
-        httpOnly: true,
-        sameSite: "none",
-        secure: true,
-      })
-      .status(204)
-      .send({ message: "Logged out!" });
+    // res
+    //   .clearCookie(authCookieName, {
+    //     httpOnly: true,
+    //     sameSite: "none",
+    //     secure: true,
+    //   })
+    res.status(204).send({ message: "Logged out!" });
   } catch (error) {
     res.status(400).send({ message: error.message });
   }

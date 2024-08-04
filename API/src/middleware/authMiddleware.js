@@ -3,7 +3,7 @@ const jwtService = require("../lib/jwt");
 const TokenBlackList = require("../model/TokenBlackList");
 
 const authMiddleware = async (req, res, next) => {
-  const token = req.cookies["auth"];
+  const token = req.headers["x-authorization"];
   if (!token) {
     return next();
   }
@@ -20,11 +20,7 @@ const authMiddleware = async (req, res, next) => {
     next();
   } catch (error) {
     await TokenBlackList.create({ token });
-    res.clearCookie("auth", {
-      httpOnly: true,
-      sameSite: "none",
-      secure: true,
-    });
+
     res.status(401).send({ message: "Invalid token!" });
   }
 };
