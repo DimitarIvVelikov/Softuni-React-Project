@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import { useContext } from "react";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Header() {
+  const { username } = useContext(AuthContext);
+
+  console.log(username);
+
   return (
     <>
       <nav className="header">
@@ -34,7 +40,7 @@ export default function Header() {
 
         <p className="username">
           <Link to="/" className="username-link">
-            User
+            {username ? username : "User"}
           </Link>
         </p>
       </nav>
