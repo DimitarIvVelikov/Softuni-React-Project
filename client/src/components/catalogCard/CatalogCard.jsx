@@ -15,7 +15,7 @@ export default function CatalogCard({ trainingProgram }) {
           />
           <div className="catalog-card-body">
             <div className="catalog-workout-info">
-              <span>Group : {trainingProgram.name}</span>
+              <span>Name : {trainingProgram.name}</span>
               <span>Difficulty : {trainingProgram.difficulty}</span>
             </div>
           </div>
