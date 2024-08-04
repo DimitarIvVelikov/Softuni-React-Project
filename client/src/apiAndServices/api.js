@@ -1,14 +1,14 @@
-const baseURL = "http://127.0.0.1:5000/api";
+const baseURL = "http://127.0.0.1:5000/api/";
 
 async function requester(method, url, body) {
   const options = {
     method,
     headers: {},
   };
-  // const userData = store.getState()?.auth;
-  // if (userData || options.method === "DELETE") {
-  //   options.headers["x-authorization"] = userData.accessToken;
-  // }
+  const accessToken = "";
+  if (accessToken) {
+    options.headers["x-authorization"] = accessToken;
+  }
 
   if (body) {
     options.headers["Content-Type"] = "application/json";
@@ -16,6 +16,7 @@ async function requester(method, url, body) {
   }
   try {
     const response = await fetch(baseURL + url, options);
+
     if (!response.ok) {
       const error = await response.json();
       throw new Error(error.message);

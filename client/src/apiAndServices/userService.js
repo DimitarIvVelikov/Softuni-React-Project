@@ -1,8 +1,9 @@
 import { api } from "./api";
+const URI = "auth";
 const apiEndpoints = {
-  loginUrl: "users/login",
-  registerUrl: "users/register",
-  logoutUrl: "users/logout",
+  loginUrl: URI + "/login",
+  registerUrl: URI + "/register",
+  logoutUrl: URI + "/logout",
 };
 
 export async function login(body) {

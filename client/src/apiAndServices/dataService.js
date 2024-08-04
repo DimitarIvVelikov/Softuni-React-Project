@@ -1,11 +1,11 @@
 import { api } from "./api";
-const URI = "/training-programs";
+const URI = "training-programs";
 const dataEndpoints = {
-  getAllTrainingPrograms: "/",
+  getAllTrainingPrograms: URI + "/",
 };
 
 async function getAllTrainingPrograms() {
-  const data = await api.get(URI + dataEndpoints.getAllTrainingPrograms);
+  const data = await api.get(dataEndpoints.getAllTrainingPrograms);
   return data;
 }
 
