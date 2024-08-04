@@ -1,4 +1,6 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { userService } from "../../apiAndServices/userService";
+import { AuthContext } from "../../context/AuthContext";
 
 export default function Login() {
   const [formValues, setFormValues] = useState({
@@ -6,9 +8,24 @@ export default function Login() {
     password: "",
   });
 
-  const submitHandler = (e) => {
+  const { changeAuthState } = useContext(AuthContext);
+
+  const submitHandler = async (e) => {
     e.preventDefault();
-    console.log("Submit Handler triggered");
+
+    try {
+      const login = await userService.login(formValues);
+      const { username, email, accessToken, _id } = login;
+      changeAuthState({
+        username,
+        email,
+        accessToken,
+        _id,
+        isAuthenticated: true,
+      });
+    } catch (error) {
+      console.log("Error Login");
+    }
   };
 
   const onChangeHandler = (e) => {
