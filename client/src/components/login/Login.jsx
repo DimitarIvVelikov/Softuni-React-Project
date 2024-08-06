@@ -1,20 +1,23 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { userService } from "../../apiAndServices/userService";
-import { AuthContext } from "../../context/AuthContext";
+import { useAuthContext } from "../../context/AuthContext";
 
 export default function Login() {
   const [formValues, setFormValues] = useState({
     email: "",
     password: "",
   });
+  const navigate = useNavigate();
 
-  const { changeAuthState } = useContext(AuthContext);
+  const { changeAuthState } = useAuthContext();
 
   const submitHandler = async (e) => {
     e.preventDefault();
 
     try {
       const login = await userService.login(formValues);
+
       const { username, email, accessToken, _id } = login;
       changeAuthState({
         username,
@@ -23,6 +26,7 @@ export default function Login() {
         _id,
         isAuthenticated: true,
       });
+      navigate("/");
     } catch (error) {
       console.log("Error Login");
     }
