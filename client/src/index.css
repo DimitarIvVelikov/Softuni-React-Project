@@ -4,6 +4,7 @@
 @import "../public/styles/login.css";
 @import "../public/styles/register.css";
 @import "../public/styles/catalog.css";
+@import "../public/styles/create.css";
 
 * {
   margin: 0;
