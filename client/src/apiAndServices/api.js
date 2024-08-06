@@ -5,7 +5,9 @@ async function requester(method, url, body) {
     method,
     headers: {},
   };
-  const accessToken = "";
+
+  const accessToken = JSON.parse(localStorage.getItem("auth"))?.accessToken;
+
   if (accessToken) {
     options.headers["x-authorization"] = accessToken;
   }
@@ -31,20 +33,20 @@ async function requester(method, url, body) {
   }
 }
 
-async function get(url) {
-  return await requester("GET", url);
+function get(url) {
+  return requester("GET", url);
 }
 
-async function post(url, body) {
-  return await requester("POST", url, body);
+function post(url, body) {
+  return requester("POST", url, body);
 }
 
-async function put(url, body) {
-  return await requester("PUT", url, body);
+function put(url, body) {
+  return requester("PUT", url, body);
 }
 
-async function del(url) {
-  return await requester("DELETE", url);
+function del(url) {
+  return requester("DELETE", url);
 }
 
 export const api = {
