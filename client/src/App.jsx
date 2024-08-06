@@ -7,6 +7,7 @@ import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 import Catalog from "./components/catalog/Catalog";
 import AuthContextProvider from "./context/AuthContext";
+import Create from "./components/create/Create";
 function App() {
   return (
     <>
@@ -17,6 +18,8 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/program/:id" element={<Catalog />} />
         </Routes>
         <Footer />
       </AuthContextProvider>
