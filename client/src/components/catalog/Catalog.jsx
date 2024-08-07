@@ -6,14 +6,13 @@ export default function Catalog() {
   useEffect(() => {
     (async () => {
       const trainingProgramsArray = await dataService.getAllTrainingPrograms();
-      console.log(trainingProgramsArray);
 
       setTrainingProgram(trainingProgramsArray);
     })();
   }, []);
   return (
     <>
-      <h1 className="home-title">Catalog</h1>
+      <h1 className="home-title catalog-title">Catalog</h1>
 
       <div className="catalog-wrapper">
         {trainingPrograms.length > 0 ? (
