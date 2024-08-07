@@ -4,15 +4,15 @@ Final React Project for Softuni course
 
 # Start API
 
--cd API
--npm i
--npm start
+- cd API
+- npm i
+- npm start
 
 # Start Project
 
--cd Project
--npm i
--npm run dev
+- cd Project
+- npm i
+- npm run dev
 
 # Project Documentation
 
@@ -32,8 +32,8 @@ The following will present the libraries that are used to create this project.
 
 # FrontEnd
 
--React
--Material IU Icons
+- React
+- Material IU Icons
 
 # Backend
 
