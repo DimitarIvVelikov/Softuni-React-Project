@@ -14,7 +14,11 @@ export default function Login() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-
+    const { email, password } = formValues;
+    if (!email || !password) {
+      alert("All fields are required!");
+      return;
+    }
     try {
       const login = await userService.login(formValues);
 

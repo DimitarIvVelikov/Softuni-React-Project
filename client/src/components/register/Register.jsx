@@ -15,14 +15,23 @@ export default function Register() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    const { username, email, password, rePassword } = formValues;
+    if (!username || !email || !password || !rePassword) {
+      alert("All fields are required!");
+      return;
+    }
 
+    if (password === rePassword) {
+      alert("Passwords do not match!");
+      return;
+    }
     try {
       const { username, email, accessToken, _id } = await userService.register(
         formValues
       );
 
       changeAuthState({
-        userId: _id,
+        _id,
         email,
         accessToken,
         username,

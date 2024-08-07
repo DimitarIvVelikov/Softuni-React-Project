@@ -14,9 +14,24 @@ export default function Create() {
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    console.log(formValues);
 
+    const { name, description, duration, difficulty, imageUrl } = formValues;
+    if (!name || !description || !duration || !difficulty || !imageUrl) {
+      alert("All fields are required!");
+      return;
+    }
+    const regExp = new RegExp(/^https?:\/\//);
+    if (!regExp.test(imageUrl)) {
+      alert(
+        "Invalid image URL! Image Url should start with Http:// or Https://"
+      );
+      return;
+    }
     try {
-      const createdProgram = dataService.createTrainingProgram(formValues);
+      const createdProgram = await dataService.createTrainingProgram(
+        formValues
+      );
       console.log(createdProgram);
 
       navigate(`/program/${createdProgram._id}`);
