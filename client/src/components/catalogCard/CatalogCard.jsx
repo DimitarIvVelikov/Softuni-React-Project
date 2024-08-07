@@ -4,7 +4,7 @@ export default function CatalogCard({ trainingProgram }) {
   return (
     <>
       <div className="catalog-card-wrapper">
-        <Link className="link" to={"/"}>
+        <Link className="link" to={`/program/${trainingProgram._id}`}>
           <img
             className="catalog-card-img"
             src={trainingProgram.imageUrl}

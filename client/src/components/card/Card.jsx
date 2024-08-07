@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
 
-export default function Card() {
+export default function Card({ trainingProgram }) {
   return (
     <>
       <div className="card-wrapper">
-        <img className="card-img" src="workout.jpg" alt="Workout" width={200} />
+        <img
+          className="card-img"
+          src={trainingProgram.imageUrl}
+          alt="Workout"
+          width={200}
+        />
         <div className="card-body">
-          <h5 className="card-title">Workout 1</h5>
+          <h5 className="card-title">{trainingProgram.name}</h5>
           <div className="workout-info">
-            <span>Group : Abs</span>
-            <span>Difficulty : Beginner</span>
-            <span>Duration : 30 min</span>
+            <span>Difficulty : {trainingProgram.difficulty}</span>
+            <span>Duration : {trainingProgram.duration}</span>
           </div>
-          <Link className="link">More Details</Link>
+          <Link className="link" to={`/program/${trainingProgram._id}`}>
+            More Details
+          </Link>
         </div>
       </div>
     </>
