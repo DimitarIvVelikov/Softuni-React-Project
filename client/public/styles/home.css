@@ -1,6 +1,5 @@
 .home-title,
 .home-title-sub {
-  padding-top: 1em;
   font-size: 3em;
   text-align: center;
   color: #f35525;
@@ -14,6 +13,21 @@
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
+  padding-top: 2em;
+}
+
+.title-container {
+  background-color: rgba(219, 213, 213, 0.298);
+
+  z-index: 30;
+  width: 50vw;
+  border-radius: 2em;
+  margin: 0 auto;
+  padding: 1em;
+  /* box-shadow: -10px 5px 117px 12px rgba(0, 0, 0, 0.49) inset;
+  -webkit-box-shadow: -10px 5px 117px 12px rgba(62, 62, 62, 0.49) inset;
+  -moz-box-shadow: -10px 5px 117px 12px rgba(65, 64, 64, 0.49) inset; */
+  backdrop-filter: blur(10px);
 }
 
 .about-trainer {
@@ -58,7 +72,7 @@
 
 .workout-info {
   display: flex;
-  gap: 1vw;
+  /* gap: 1vw;   */
   flex-wrap: wrap;
   align-content: center;
 }

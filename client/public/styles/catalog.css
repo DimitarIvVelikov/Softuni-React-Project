@@ -8,6 +8,10 @@
   text-align: center;
 }
 
+.catalog-title {
+  margin-bottom: 0.5em;
+}
+
 .catalog-card-wrapper {
   flex: 1 1 25vw;
   text-wrap: nowrap;
@@ -25,8 +29,7 @@
 }
 
 .catalog-workout-info span {
-  flex: 1 0 1.5vw;
-  font-size: 12px;
+  padding: 0.1em;
 }
 /* .catalog-workout-info span:nth-child(2) {
   margin-bottom: -4vh;
