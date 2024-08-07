@@ -6,7 +6,7 @@ Final React Project for Softuni course
 
 cd API
 npm i
-npm run start
+npm start
 
 # Start Project
 
@@ -38,8 +38,8 @@ The following will present the libraries that are used to create this project.
 
 # FrontEnd
 
-    React
-    Material IU Icons
+-React
+-Material IU Icons
 
 # Backend
 
@@ -55,6 +55,7 @@ The following will present the libraries that are used to create this project.
 Base API = "http://127.0.0.1:5000/api"
 
 User Base URI = "/auth"
+
 User Endpoints = {
 login: "/login", POST
 register: "/register", POST
