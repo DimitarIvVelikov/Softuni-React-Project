@@ -16,7 +16,7 @@ export async function register(body) {
   return data;
 }
 export async function logout() {
-  await api.get(apiEndpoints.logoutUrl);
+  await api.post(apiEndpoints.logoutUrl);
 }
 
 export const userService = {

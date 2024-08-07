@@ -1,5 +1,4 @@
 const baseURL = "http://127.0.0.1:5000/api/";
-
 async function requester(method, url, body) {
   const options = {
     method,
@@ -29,7 +28,10 @@ async function requester(method, url, body) {
     return response.json();
   } catch (error) {
     console.log(error);
-    alert("Error requester");
+
+    if (error.message === "Invalid token!") {
+      localStorage.removeItem("auth");
+    }
   }
 }
 
