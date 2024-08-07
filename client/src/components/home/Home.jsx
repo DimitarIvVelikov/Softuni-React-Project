@@ -44,8 +44,8 @@ export default function Home() {
         />
       </div>
 
-      <h1 className="home-title">Our most popular workouts</h1>
-      <div className="popular-workouts">
+      <h1 className="home-title">Our latest workouts</h1>
+      <div className="latest-workouts">
         {latestTrainingsPrograms.length != 0 ? (
           latestTrainingsPrograms.map((training) => {
             return <Card key={training._id} trainingProgram={training} />;
