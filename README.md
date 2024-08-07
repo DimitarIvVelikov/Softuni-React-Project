@@ -4,15 +4,15 @@ Final React Project for Softuni course
 
 # Start API
 
-cd API
-npm i
-npm start
+-cd API
+-npm i
+-npm start
 
 # Start Project
 
-cd Project
-npm i
-npm run dev
+-cd Project
+-npm i
+-npm run dev
 
 # Project Documentation
 
