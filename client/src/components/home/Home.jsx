@@ -1,11 +1,23 @@
+import { useEffect, useState } from "react";
 import Card from "../card/Card";
+import { dataService } from "../../apiAndServices/dataService";
 
 export default function Home() {
+  const [latestTrainingsPrograms, setLatestTrainingsPrograms] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const latestTrainings = await dataService.getLatestTrainingPrograms();
+      setLatestTrainingsPrograms(latestTrainings);
+    })();
+  }, []);
   return (
     <>
       <div className="img-container">
-        <h1 className="home-title">Welcome to the best fitness forum</h1>
-        <h3 className="home-title-sub">Get to your dream physic!</h3>
+        <div className="title-container">
+          <h1 className="home-title">Welcome to the best fitness forum</h1>
+          <h3 className="home-title-sub">Get to your dream physic!</h3>
+        </div>
       </div>
 
       <div className="about-trainer">
@@ -34,9 +46,13 @@ export default function Home() {
 
       <h1 className="home-title">Our most popular workouts</h1>
       <div className="popular-workouts">
-        <Card />
-        <Card />
-        <Card />
+        {latestTrainingsPrograms.length != 0 ? (
+          latestTrainingsPrograms.map((training) => {
+            return <Card key={training._id} trainingProgram={training} />;
+          })
+        ) : (
+          <h3>No Trainings Found</h3>
+        )}
       </div>
     </>
   );
