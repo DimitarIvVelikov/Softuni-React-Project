@@ -24,15 +24,9 @@ There is a catalog for all of the available training programs.
 
 Each program has its own page and for the owner there are edit and delete functions. For guests they can only review the information and for logged in users that are not the owner will have the option to sign up.
 
-There is a profile page that has the option to edit it. It has a list of all created or sign up training programs.
-
 There is a page for the creation of training programs.
 
-All forms have validations with some just being required and other a bit more complicated(emails or imageUrls).
-
-Observables were used to fetch data from the API with the provided Endpoints as in the Rest-Api-Endpoints.md file.
-
-The project is nowhere near being complete but it is finalized for the exam to a point where it can be graded.
+All forms have validations.
 
 The following will present the libraries that are used to create this project.
 
@@ -51,6 +45,8 @@ The following will present the libraries that are used to create this project.
 - cors
 - JWT token
 - Bcrypt
+
+## Backend Endpoints
 
 Base API = "http://127.0.0.1:5000/api"
 
