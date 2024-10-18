@@ -1,0 +1,173 @@
+[
+{
+  "_id": {
+    "$oid": "660beb5417365a482394c222"
+  },
+  "name": "Strength Training 101",
+  "description": "Learn fundamental strength exercises targeting major muscle groups.\n",
+  "duration": 40,
+  "difficulty": "Moderate",
+  "imageUrl": "https://images.unsplash.com/photo-1521804906057-1df8fdb718b7?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RyZW5ndGglMjB0cmFpbmluZ3xlbnwwfHwwfHx8MA%3D%3D",
+  "owner": {
+    "$oid": "6609b97b5ac5e5c60233d818"
+  },
+  "signUpList": [
+    {
+      "$oid": "65fee1192cfc80b1e52bc3b0"
+    }
+  ],
+  "created_at": {
+    "$date": "2024-04-02T11:26:12.889Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-03T11:20:16.750Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660bebd117365a482394c228"
+  },
+  "name": "Marathon Training Plan",
+  "description": "Prepare for a marathon with a structured running schedule and cross-training.\n",
+  "duration": 60,
+  "difficulty": "Intermediate",
+  "imageUrl": "https://plus.unsplash.com/premium_photo-1670002410051-3e2dd84a56d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFyYXRob24lMjBUcmFpbmluZyUyMFBsYW58ZW58MHx8MHx8fDA%3D",
+  "owner": {
+    "$oid": "6609b97b5ac5e5c60233d818"
+  },
+  "signUpList": [],
+  "created_at": {
+    "$date": "2024-04-02T11:28:17.180Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T11:28:17.180Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660bec0917365a482394c22e"
+  },
+  "name": "High-Intensity Interval Training (HIIT)",
+  "description": "Short bursts of intense exercise followed by brief rest periods for maximum calorie burn.",
+  "duration": 30,
+  "difficulty": "Advanced",
+  "imageUrl": "https://images.unsplash.com/photo-1637651684506-07e16fcf7b06?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8SGlnaCUyMEludGVuc2l0eSUyMEludGVydmFsJTIwVHJhaW5pbmclMjAoSElJVCl8ZW58MHx8MHx8fDA%3D",
+  "owner": {
+    "$oid": "6609b97b5ac5e5c60233d818"
+  },
+  "signUpList": [],
+  "created_at": {
+    "$date": "2024-04-02T11:29:13.983Z"
+  },
+  "updatedAt": {
+    "$date": "2024-04-02T11:29:13.983Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660bee5717365a482394c29f"
+  },
+  "name": "Pilates for Core Strength",
+  "description": "Focus on core muscles with Pilates exercises to improve stability and posture.\n",
+  "duration": 25,
+  "difficulty": "Easy to Moderate",
+  "imageUrl": "https://plus.unsplash.com/premium_photo-1672046218182-77e9a3e9f141?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8UGlsYXRlcyUyMGZvciUyMENvcmUlMjBTdHJlbmd0aHxlbnwwfHwwfHx8MA%3D%3D",
+  "owner": {
+    "$oid": "65fee1192cfc80b1e52bc3b0"
+  },
+  "signUpList": [
+    {
+      "$oid": "66af4bc569865baf2683c245"
+    },
+    {
+      "$oid": "66af4bc569865baf2683c245"
+    }
+  ],
+  "created_at": {
+    "$date": "2024-04-02T11:39:03.236Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-10T13:22:19.586Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660bee7017365a482394c2a5"
+  },
+  "name": "Couch to 5K",
+  "description": "Gradual running program designed to take beginners from sedentary to running a 5K.\n",
+  "duration": 50,
+  "difficulty": "Easy to Moderate",
+  "imageUrl": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dHJhaW5pbmd8ZW58MHx8MHx8fDA%3D",
+  "owner": {
+    "$oid": "65fee1192cfc80b1e52bc3b0"
+  },
+  "signUpList": [
+    {
+      "$oid": "66af4bc569865baf2683c245"
+    }
+  ],
+  "created_at": {
+    "$date": "2024-04-02T11:39:28.543Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T09:43:37.890Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "660bee8a17365a482394c2ab"
+  },
+  "name": "Bodyweight Fitness Routine",
+  "description": "No-equipment workout plan featuring bodyweight exercises for strength and flexibility.",
+  "duration": 30,
+  "difficulty": "Easy to Moderate",
+  "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Qm9keXdlaWdodCUyMEZpdG5lc3MlMjBSb3V0aW5lfGVufDB8fDB8fHww",
+  "owner": {
+    "$oid": "65fee1192cfc80b1e52bc3b0"
+  },
+  "signUpList": [
+    {
+      "$oid": "66af4bc569865baf2683c245"
+    },
+    {
+      "$oid": "66af4bc569865baf2683c245"
+    },
+    {
+      "$oid": "66af4bc569865baf2683c245"
+    }
+  ],
+  "created_at": {
+    "$date": "2024-04-02T11:39:54.788Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-10T10:53:52.801Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66b76940839f9cef78e05c89"
+  },
+  "name": "Testtest",
+  "description": "test",
+  "duration": 30,
+  "difficulty": "test",
+  "imageUrl": "https://plus.unsplash.com/premium_photo-1670002410051-3e2dd84a56d4?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8TWFyYXRob24lMjBUcmFpbmluZyUyMFBsYW58ZW58MHx8MHx8fDA%3D",
+  "owner": {
+    "$oid": "66af4bc569865baf2683c245"
+  },
+  "signUpList": [],
+  "created_at": {
+    "$date": "2024-08-06T06:52:37.605Z"
+  },
+  "updatedAt": {
+    "$date": "2024-08-07T09:34:05.043Z"
+  },
+  "__v": 0
+}]
