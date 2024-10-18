@@ -1,5 +1,6 @@
 const cors = require("cors");
 const express = require("express");
+const os = require('os');
 const app = express();
 app.use(
   cors({
@@ -7,7 +8,8 @@ app.use(
     credentials: true,
   })
 );
-
+const appIp = os.networkInterfaces().eth0[0].address
+const port = 5000
 const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
@@ -25,7 +27,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/angular-project");
 mongoose.connection.on("connected", () => console.log("DB is connected"));
 mongoose.connection.on("error", (err) => console.log(err));
 
-app.listen(5000, () => {
-
-  console.log("App is listening on http://127.0.0.1:5000/");
+app.listen(port, () => {
+  console.log(`App is listening on http://${appIp}:${port}/`);
 });
