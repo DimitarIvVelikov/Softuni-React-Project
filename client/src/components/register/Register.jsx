@@ -21,7 +21,7 @@ export default function Register() {
       return;
     }
 
-    if (password === rePassword) {
+    if (password !== rePassword) {
       alert("Passwords do not match!");
       return;
     }
@@ -99,7 +99,7 @@ export default function Register() {
             Repeat Password <span className="required">*</span>
           </label>
           <input
-            type="rePassword"
+            type="password"
             id="rePassword"
             name="rePassword"
             placeholder="Repeat Password"
@@ -109,7 +109,7 @@ export default function Register() {
         </div>
 
         <div className="submit-button">
-          <button type="submit">Sing Up</button>
+          <button type="submit">Sign Up</button>
         </div>
       </form>
     </>
