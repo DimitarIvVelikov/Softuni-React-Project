@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "http://138.201.156.22:80",
     credentials: true,
   })
 );
@@ -26,5 +26,6 @@ mongoose.connection.on("connected", () => console.log("DB is connected"));
 mongoose.connection.on("error", (err) => console.log(err));
 
 app.listen(5000, () => {
+
   console.log("App is listening on http://127.0.0.1:5000/");
 });
