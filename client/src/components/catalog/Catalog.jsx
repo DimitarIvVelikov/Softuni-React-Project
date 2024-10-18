@@ -15,7 +15,9 @@ export default function Catalog() {
       <h1 className="home-title catalog-title">Catalog</h1>
 
       <div className="catalog-wrapper">
-        {trainingPrograms.length > 0 ? (
+        {!trainingPrograms || trainingPrograms.length === 0 ?  (
+          <h2 className="no-training">No Training Programs Found</h2>
+        ): (
           trainingPrograms.map((trainingProgram) => {
             return (
               <CatalogCard
@@ -24,9 +26,7 @@ export default function Catalog() {
               />
             );
           })
-        ) : (
-          <h2>No Posts Yet</h2>
-        )}
+        ) }
       </div>
     </>
   );
