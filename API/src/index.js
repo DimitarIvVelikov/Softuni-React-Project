@@ -27,6 +27,6 @@ mongoose.connect("mongodb://127.0.0.1:27017/angular-project");
 mongoose.connection.on("connected", () => console.log("DB is connected"));
 mongoose.connection.on("error", (err) => console.log(err));
 
-app.listen(port, () => {
+app.listen(port,appIp,() => {
   console.log(`App is listening on http://${appIp}:${port}/`);
 });
