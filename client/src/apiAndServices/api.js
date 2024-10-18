@@ -1,4 +1,6 @@
-const baseURL = "http://127.0.0.1:5000/api/";
+const baseURL ="http://138.201.156.22/api/"; 
+// "http://127.0.0.1:5000/api/";
+
 async function requester(method, url, body) {
   const options = {
     method,
@@ -17,7 +19,7 @@ async function requester(method, url, body) {
   }
   try {
     const response = await fetch(baseURL + url, options);
-
+    
     if (!response.ok) {
       const error = await response.json();
       throw new Error(error.message);
